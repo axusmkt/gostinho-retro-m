@@ -72,6 +72,15 @@ const LIVE_NOTIFICATIONS: LiveNotification[] = [
 const CHECKOUT_BASIC_URL = (import.meta as any).env.VITE_CHECKOUT_BASIC_URL || "https://ggcheckout.app/checkout/v5/fqOOlBZQIz99nsQoRKf5";
 const CHECKOUT_COMPLETE_URL = (import.meta as any).env.VITE_CHECKOUT_COMPLETE_URL || "https://ggcheckout.app/checkout/v5/foTluRGQKsAib3S3ccfZ";
 
+// Nostalgic Malhação covers list for beautiful background watermarks
+const COVERS = [
+  "https://i.ibb.co/nssYmFZL/2001.jpg",
+  "https://i.ibb.co/TBJ3krY9/2005.jpg",
+  "https://i.ibb.co/XfxhNnQB/2006.jpg",
+  "https://i.ibb.co/jPvGK4mf/2008.jpg",
+  "https://i.ibb.co/60stzjQC/2014.jpg",
+];
+
 export default function App() {
   const [isBottomBarVisible, setIsBottomBarVisible] = useState(true);
   
@@ -175,19 +184,53 @@ export default function App() {
       </header>
 
       {/* 3. HERO FOLD SECTION (DIRECT CLARITY) */}
-      <section id="hero-fold-section" className="px-4 py-8 bg-white border-b border-slate-100">
-        <div className="max-w-md mx-auto text-center">
+      <section id="hero-fold-section" className="relative px-4 py-8 md:py-14 bg-white border-b border-slate-100 overflow-hidden">
+        
+        {/* Nostalgic Diagonal Cover Grid Background with 15% opacity */}
+        <div className="absolute inset-0 pointer-events-none select-none opacity-[0.16] z-0 flex flex-col justify-center gap-3 md:gap-4 transform -rotate-3 scale-110 md:scale-115 origin-center">
+          {/* Lane 1 */}
+          <div className="flex gap-3 md:gap-4 justify-center whitespace-nowrap -translate-x-12">
+            {[...COVERS, ...COVERS, ...COVERS].map((src, i) => (
+              <div key={`lane1-${i}`} className="w-14 h-20 md:w-20 md:h-28 rounded-lg md:rounded-xl overflow-hidden shrink-0 border border-slate-200 shadow-sm bg-slate-50">
+                <img src={src} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+            ))}
+          </div>
+          {/* Lane 2 */}
+          <div className="flex gap-3 md:gap-4 justify-center whitespace-nowrap translate-x-6">
+            {[...COVERS, ...COVERS, ...COVERS].reverse().map((src, i) => (
+              <div key={`lane2-${i}`} className="w-14 h-20 md:w-20 md:h-28 rounded-lg md:rounded-xl overflow-hidden shrink-0 border border-slate-200 shadow-sm bg-slate-50">
+                <img src={src} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+            ))}
+          </div>
+          {/* Lane 3 */}
+          <div className="flex gap-3 md:gap-4 justify-center whitespace-nowrap -translate-x-10">
+            {[...COVERS, ...COVERS, ...COVERS].map((src, i) => (
+              <div key={`lane3-${i}`} className="w-14 h-20 md:w-20 md:h-28 rounded-lg md:rounded-xl overflow-hidden shrink-0 border border-slate-200 shadow-sm bg-slate-50">
+                <img src={src} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Dynamic edge gradient overlay to smooth out visual boundary lines */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-transparent to-white/30 pointer-events-none z-1" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20 pointer-events-none z-1" />
+
+        {/* Translucent premium glassmorphic foreground card for maximum legibility */}
+        <div className="relative max-w-md mx-auto text-center z-10 bg-white/40 backdrop-blur-[3px] md:bg-white/85 md:backdrop-blur-[1px] p-5 md:p-6 rounded-2xl border border-white/60 md:border-white/80 shadow-lg md:shadow-xl">
           
-          <h1 className="font-display font-black text-2.5xl text-slate-950 tracking-tight leading-none mb-4 uppercase">
+          <h1 className="font-display font-black text-2xl md:text-2.5xl text-slate-950 tracking-tight leading-none mb-4 uppercase">
             📺 Assista Mais de 1.250 Episódios de Malhação Organizados em Um Só Lugar
           </h1>
 
-          <p className="text-slate-600 text-sm leading-relaxed mb-6">
+          <p className="text-slate-650 text-sm leading-relaxed mb-6 font-medium">
             Temporadas 2001, 2005, 2006, 2008 e 2014 prontas para acessar pelo Telegram. Receba o acesso em menos de 1 minuto após o pagamento.
           </p>
 
           {/* Core high contrast checklist */}
-          <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-left mb-6 font-semibold text-xs text-slate-800 bg-slate-50 p-4 rounded-xl border border-slate-100">
+          <div className="grid grid-cols-2 gap-x-2.5 gap-y-2 text-left mb-6 font-bold text-xs text-slate-800 bg-slate-50/90 md:bg-slate-100/80 p-3.5 rounded-xl border border-slate-200/50">
             <div className="flex items-center gap-1.5">
               <span className="text-emerald-550 font-bold text-sm">✅</span>
               <span>+1.250 episódios</span>
