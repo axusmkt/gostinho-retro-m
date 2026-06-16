@@ -69,8 +69,10 @@ const LIVE_NOTIFICATIONS: LiveNotification[] = [
 ];
 
 // Configurable direct checkout URLs (Vite environment variables or default fallbacks)
-const CHECKOUT_BASIC_URL = (import.meta as any).env.VITE_CHECKOUT_BASIC_URL || "https://ggcheckout.app/checkout/v5/fqOOlBZQIz99nsQoRKf5";
-const CHECKOUT_COMPLETE_URL = (import.meta as any).env.VITE_CHECKOUT_COMPLETE_URL || "https://ggcheckout.app/checkout/v5/foTluRGQKsAib3S3ccfZ";
+// @ts-ignore
+const CHECKOUT_BASIC_URL = import.meta.env.VITE_CHECKOUT_BASIC_URL || "https://ggcheckout.app/checkout/v5/fqOOlBZQIz99nsQoRKf5";
+// @ts-ignore
+const CHECKOUT_COMPLETE_URL = import.meta.env.VITE_CHECKOUT_COMPLETE_URL || "https://ggcheckout.app/checkout/v5/foTluRGQKsAib3S3ccfZ";
 
 // Nostalgic Malhação covers list for beautiful background watermarks
 const COVERS = [
