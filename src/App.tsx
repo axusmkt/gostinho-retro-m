@@ -68,21 +68,11 @@ const LIVE_NOTIFICATIONS: LiveNotification[] = [
   { text: "Gabriela - DF garantiu acesso vitalício", time: "há 5 min" }
 ];
 
-// Configurable direct checkout URLs with failproof fallback resolution (safeguards production bundle resolution)
-let CHECKOUT_BASIC_URL = "https://ggcheckout.app/checkout/v5/fqOOlBZQIz99nsQoRKf5";
-let CHECKOUT_COMPLETE_URL = "https://ggcheckout.app/checkout/v5/foTluRGQKsAib3S3ccfZ";
-
-try {
-  // @ts-ignore
-  if (import.meta && import.meta.env) {
-    // @ts-ignore
-    CHECKOUT_BASIC_URL = import.meta.env.VITE_CHECKOUT_BASIC_URL || CHECKOUT_BASIC_URL;
-    // @ts-ignore
-    CHECKOUT_COMPLETE_URL = import.meta.env.VITE_CHECKOUT_COMPLETE_URL || CHECKOUT_COMPLETE_URL;
-  }
-} catch (e) {
-  console.warn("Could not retrieve Vite environment variables, using default fallback URLs.", e);
-}
+// Configurable direct checkout URLs with robust fallbacks
+// @ts-ignore
+const CHECKOUT_BASIC_URL = import.meta.env.VITE_CHECKOUT_BASIC_URL || "https://ggcheckout.app/checkout/v5/fqOOlBZQIz99nsQoRKf5";
+// @ts-ignore
+const CHECKOUT_COMPLETE_URL = import.meta.env.VITE_CHECKOUT_COMPLETE_URL || "https://ggcheckout.app/checkout/v5/foTluRGQKsAib3S3ccfZ";
 
 // Nostalgic Malhação covers list for beautiful background watermarks
 const COVERS = [
@@ -96,38 +86,28 @@ const COVERS = [
 export default function App() {
   const [isBottomBarVisible, setIsBottomBarVisible] = useState(true);
   
-  // Dynamic 100% crash-proof tracking pixel and UTM script lazy loader (guarantees page load in production)
+  // Safe UTM and tracking pixel loader (deferred slightly to ensure initial paint completes without delay)
   useEffect(() => {
-    const handleUTMLoad = () => {
+    const timerId = setTimeout(() => {
       try {
         (window as any).pixelId = "6a318a65d54f8c01bd77a598";
         
-        // 1. Dynamic UTM/Pixel 1 Script Injection
         const pixelScript = document.createElement("script");
         pixelScript.async = true;
-        pixelScript.defer = true;
         pixelScript.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
         document.head.appendChild(pixelScript);
 
-        // 2. Dynamic UTM/Pixel 2 Script Injection
         const utmScript = document.createElement("script");
+        utmScript.async = true;
         utmScript.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
         utmScript.setAttribute("data-utmify-prevent-xcod-sck", "");
         utmScript.setAttribute("data-utmify-prevent-subids", "");
-        utmScript.async = true;
-        utmScript.defer = true;
         document.head.appendChild(utmScript);
       } catch (err) {
-        console.error("UTMify initialization safely prevented from blocking page load: ", err);
+        console.warn("Tracking scripts initialization bypassed: ", err);
       }
-    };
-
-    if (document.readyState === "complete") {
-      handleUTMLoad();
-    } else {
-      window.addEventListener("load", handleUTMLoad);
-      return () => window.removeEventListener("load", handleUTMLoad);
-    }
+    }, 100);
+    return () => clearTimeout(timerId);
   }, []);
   
   // Real-time countdown timer
@@ -1090,7 +1070,7 @@ export default function App() {
       {showNotification && (
         <div id="live-sales-toaster" className="fixed bottom-20 sm:bottom-24 left-4 right-4 sm:left-auto sm:right-4 z-40 max-w-xs mx-auto sm:mx-0 p-3 bg-slate-900 text-white rounded-xl shadow-2xl border border-slate-800 flex items-center gap-2.5 transition-all duration-300 transform translate-y-0 text-left scale-95 sm:scale-100">
           <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full shrink-0 animate-ping absolute -top-0.5 -left-0.5" />
-          <div className="w-2.5.H-2.5 w-2.5 h-2.5 bg-emerald-500 rounded-full shrink-0" />
+          <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full shrink-0" />
           <div className="flex-1 min-w-0">
             <p className="text-[10.5px] font-bold tracking-tight text-white line-clamp-1">
               {LIVE_NOTIFICATIONS[notificationIndex].text}
