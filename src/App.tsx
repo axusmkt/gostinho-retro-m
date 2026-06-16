@@ -68,11 +68,21 @@ const LIVE_NOTIFICATIONS: LiveNotification[] = [
   { text: "Gabriela - DF garantiu acesso vitalício", time: "há 5 min" }
 ];
 
-// Configurable direct checkout URLs (Vite environment variables or default fallbacks)
-// @ts-ignore
-const CHECKOUT_BASIC_URL = import.meta.env.VITE_CHECKOUT_BASIC_URL || "https://ggcheckout.app/checkout/v5/fqOOlBZQIz99nsQoRKf5";
-// @ts-ignore
-const CHECKOUT_COMPLETE_URL = import.meta.env.VITE_CHECKOUT_COMPLETE_URL || "https://ggcheckout.app/checkout/v5/foTluRGQKsAib3S3ccfZ";
+// Configurable direct checkout URLs with failproof fallback resolution (safeguards production bundle resolution)
+let CHECKOUT_BASIC_URL = "https://ggcheckout.app/checkout/v5/fqOOlBZQIz99nsQoRKf5";
+let CHECKOUT_COMPLETE_URL = "https://ggcheckout.app/checkout/v5/foTluRGQKsAib3S3ccfZ";
+
+try {
+  // @ts-ignore
+  if (import.meta && import.meta.env) {
+    // @ts-ignore
+    CHECKOUT_BASIC_URL = import.meta.env.VITE_CHECKOUT_BASIC_URL || CHECKOUT_BASIC_URL;
+    // @ts-ignore
+    CHECKOUT_COMPLETE_URL = import.meta.env.VITE_CHECKOUT_COMPLETE_URL || CHECKOUT_COMPLETE_URL;
+  }
+} catch (e) {
+  console.warn("Could not retrieve Vite environment variables, using default fallback URLs.", e);
+}
 
 // Nostalgic Malhação covers list for beautiful background watermarks
 const COVERS = [
@@ -85,6 +95,40 @@ const COVERS = [
 
 export default function App() {
   const [isBottomBarVisible, setIsBottomBarVisible] = useState(true);
+  
+  // Dynamic 100% crash-proof tracking pixel and UTM script lazy loader (guarantees page load in production)
+  useEffect(() => {
+    const handleUTMLoad = () => {
+      try {
+        (window as any).pixelId = "6a318a65d54f8c01bd77a598";
+        
+        // 1. Dynamic UTM/Pixel 1 Script Injection
+        const pixelScript = document.createElement("script");
+        pixelScript.async = true;
+        pixelScript.defer = true;
+        pixelScript.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+        document.head.appendChild(pixelScript);
+
+        // 2. Dynamic UTM/Pixel 2 Script Injection
+        const utmScript = document.createElement("script");
+        utmScript.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
+        utmScript.setAttribute("data-utmify-prevent-xcod-sck", "");
+        utmScript.setAttribute("data-utmify-prevent-subids", "");
+        utmScript.async = true;
+        utmScript.defer = true;
+        document.head.appendChild(utmScript);
+      } catch (err) {
+        console.error("UTMify initialization safely prevented from blocking page load: ", err);
+      }
+    };
+
+    if (document.readyState === "complete") {
+      handleUTMLoad();
+    } else {
+      window.addEventListener("load", handleUTMLoad);
+      return () => window.removeEventListener("load", handleUTMLoad);
+    }
+  }, []);
   
   // Real-time countdown timer
   const [timeLeft, setTimeLeft] = useState({ minutes: 9, seconds: 47 });
