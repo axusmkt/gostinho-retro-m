@@ -237,10 +237,10 @@ export default function App() {
 
   // Cycle social proof toast notifications in bottom corner
   useEffect(() => {
-    // Show first toast after 3 seconds
+    // Show first toast after 12 seconds
     const startTimeout = setTimeout(() => {
       setShowNotification(true);
-    }, 3000);
+    }, 12000);
 
     const interval = setInterval(() => {
       setShowNotification(false);
@@ -248,7 +248,7 @@ export default function App() {
         setNotificationIndex((prev) => (prev + 1) % LIVE_NOTIFICATIONS.length);
         setShowNotification(true);
       }, 600);
-    }, 9000);
+    }, 25000);
 
     return () => {
       clearTimeout(startTimeout);
@@ -350,26 +350,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* CABEÇALHO DA MARCA PRINCIPAL */}
-      <header id="top-navbar" className="bg-white border-b border-slate-100 py-4 px-4 shadow-sm relative z-40">
-        <div className="max-w-md mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="bg-red-600 text-white rounded-lg px-2.5 py-1.5 font-sans font-black text-base uppercase tracking-tighter leading-none shadow-sm shadow-red-500/25">
-              MÉ
-            </div>
-            <div>
-              <div className="text-left font-black tracking-tighter text-sm text-slate-950 uppercase leading-none">
-                Múltipla Escolha Retrô
-              </div>
-              <span className="text-[9px] tracking-widest text-slate-400 uppercase font-bold">O Maior Acervo Organizado</span>
-            </div>
-          </div>
-          <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-100 shadow-sm shrink-0">
-            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
-            142 online agora
-          </span>
-        </div>
-      </header>
+
 
       {/* --- SEÇÃO 1 — HERO --- */}
       <section id="section-hero" className="relative px-4 py-16 md:py-24 bg-white border-b border-slate-100 overflow-hidden">
