@@ -112,11 +112,11 @@ const CHECKOUT_COMPLETE_URL = import.meta.env.VITE_CHECKOUT_COMPLETE_URL || "htt
 
 // Nostalgic Malhação covers list for beautiful background elements
 const COVERS = [
-  "https://i.ibb.co/nssYmFZL/2001.jpg",
-  "https://i.ibb.co/TBJ3krY9/2005.jpg",
-  "https://i.ibb.co/XfxhNnQB/2006.jpg",
-  "https://i.ibb.co/jPvGK4mf/2008.jpg",
-  "https://i.ibb.co/60stzjQC/2014.jpg",
+  "https://i.ibb.co/KckJ0sn6/2001.jpg",
+  "https://i.ibb.co/8gx6cdNv/2005.jpg",
+  "https://i.ibb.co/G4N70vFm/2006.jpg",
+  "https://i.ibb.co/GfhStqTw/2008.jpg",
+  "https://i.ibb.co/WvwTffyF/2014.jpg",
 ];
 
 // Structural Carousel mock data simulating the real Telegram structure
@@ -285,6 +285,21 @@ export default function App() {
 
   // Safe UTM and tracking pixel loader (isolated in try/catch dynamically so that it never blocks the critical path)
   useEffect(() => {
+    // Prevent loading UTMify tracking scripts in development or preview sandbox environments to avoid "Failed to fetch" errors.
+    const hostname = window.location.hostname;
+    const isSandboxOrDev = 
+      hostname.includes("localhost") || 
+      hostname.includes("127.0.0.1") || 
+      hostname.includes("run.app") || 
+      hostname.includes("aistudio") || 
+      hostname.includes("web-preview") || 
+      hostname.includes("gitpod");
+
+    if (isSandboxOrDev) {
+      console.log("UTMify scripts omitted in sandbox preview/development environment to ensure smooth local execution.");
+      return;
+    }
+
     const timerId = setTimeout(() => {
       try {
         (window as any).pixelId = "6a318a65d54f8c01bd77a598";
@@ -1178,9 +1193,9 @@ export default function App() {
           
           <div className="grid grid-cols-3 gap-2.5 max-w-sm mx-auto">
             {[
-              { year: "2001", src: "https://i.ibb.co/nssYmFZL/2001.jpg", desc: "Cabeção / Beto" },
-              { year: "2005", src: "https://i.ibb.co/TBJ3krY9/2005.jpg", desc: "Vagabanda / Bernardo" },
-              { year: "2008", src: "https://i.ibb.co/jPvGK4mf/2008.jpg", desc: "Débora / Yasmin" }
+              { year: "2001", src: "https://i.ibb.co/KckJ0sn6/2001.jpg", desc: "Cabeção / Beto" },
+              { year: "2005", src: "https://i.ibb.co/8gx6cdNv/2005.jpg", desc: "Vagabanda / Bernardo" },
+              { year: "2008", src: "https://i.ibb.co/GfhStqTw/2008.jpg", desc: "Débora / Yasmin" }
             ].map((cover, idx) => (
               <div key={idx} className="bg-slate-950/65 border border-slate-800 rounded-xl p-1.5 flex flex-col items-center shadow-md">
                 <div className="aspect-[2/3] w-full rounded-lg overflow-hidden border border-slate-800 bg-slate-900 mb-1.5">
