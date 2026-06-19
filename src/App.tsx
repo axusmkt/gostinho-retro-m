@@ -422,8 +422,8 @@ export default function App() {
             O ACERVO DEFINITIVO PARA FÃS DE MALHAÇÃO
           </div>
 
-          <h1 className="font-sans font-black text-3xl sm:text-4xl text-slate-950 tracking-tight leading-[1.05] mb-5 uppercase max-w-sm mx-auto text-balance" style={{ textWrap: "balance" }}>
-            Reviva mais de 20 anos de Malhação quando quiser
+          <h1 className="font-sans font-black text-3xl sm:text-4xl text-slate-950 tracking-tight leading-[1.1] mb-5 uppercase max-w-sm mx-auto text-balance" style={{ textWrap: "balance" }}>
+            Reviva <span className="relative inline-block bg-gradient-to-r from-red-600 via-red-500 to-amber-500 text-white px-2.5 py-1 rounded-xl transform -rotate-1 shadow-md shadow-red-600/20">mais de 20 anos</span> de Malhação quando quiser
           </h1>
 
           {/* Imagem Hero */}
