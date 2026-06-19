@@ -69,6 +69,24 @@ const TESTIMONIALS_DATA: TestimonialItem[] = [
     rating: 5,
     text: "A qualidade do vídeo é ótima e os episódios carregam instantaneamente no player do Telegram. Não trava em nada e posso assistir até no trabalho pelo computador.",
     favoriteSeason: "Malhação 2012"
+  },
+  {
+    id: "t5",
+    name: "Mariana Costa",
+    location: "Salvador - BA",
+    avatarSeed: "MC",
+    rating: 5,
+    text: "Nossa, que emoção ver tudo isso de novo! Me fez voltar no tempo, na época que eu chegava correndo da escola e tomava café assistindo com a minha irmã. Reviver essa fase da adolescência traz um quentinho no coração maravilhoso.",
+    favoriteSeason: "Malhação 2003"
+  },
+  {
+    id: "t6",
+    name: "Bruno Albuquerque",
+    location: "Curitiba - PR",
+    avatarSeed: "BA",
+    rating: 5,
+    text: "Nunca imaginei que ia me emocionar tanto revendo as histórias que marcaram a minha adolescência. Ver os romances e as músicas daquela época trouxe lembranças muito especiais que eu nem sabia que ainda estavam guardadas na memória.",
+    favoriteSeason: "Malhação 2004 (Vagabanda)"
   }
 ];
 
@@ -405,7 +423,7 @@ export default function App() {
 
           {/* Subheadline (Curta e Direta) */}
           <p className="text-slate-600 text-[12.5px] sm:text-[13.5px] leading-snug mb-6 px-1 text-pretty max-w-sm mx-auto" style={{ textWrap: "pretty" }}>
-            Receba acesso imediato às 24 temporadas disponíveis hoje com entrega automática por e-mail e WhatsApp.
+            Reviva os personagens, as trilhas sonoras e os romances que marcaram a sua adolescência no acervo de Malhação mais completo já organizado.
           </p>
 
           {/* Benefícios Compactos (Grid 2x2) */}
@@ -458,6 +476,30 @@ export default function App() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+
+      {/* --- MICRO BLOCO DE NOSTALGIA --- */}
+      <section className="px-4 py-8 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-md mx-auto text-center">
+          <h2 className="font-sans font-black text-sm sm:text-base text-slate-900 flex items-center justify-center gap-1.5 uppercase tracking-tight">
+            ❤️ Você Vai Reencontrar Fases Que Marcaram Sua História
+          </h2>
+          <p className="text-slate-600 text-[11px] sm:text-[12px] mt-1.5 mb-4 max-w-xs mx-auto leading-relaxed">
+            Reviva personagens, romances, bandas e momentos que fizeram parte da adolescência de milhões de brasileiros.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-2 max-w-sm mx-auto">
+            {[
+              "Cabeção", "Pedro e Júlia", "Vagabanda", 
+              "Natasha e Bruno", "Ju e Dinho", "Ducca e Karina", "As Five"
+            ].map((item) => (
+              <span key={item} className="inline-flex items-center gap-1 bg-white border border-slate-200/60 px-2.5 py-1.5 rounded-full text-[10.5px] sm:text-[11px] font-black text-slate-800 shadow-3xs uppercase tracking-tight">
+                <span className="text-red-500 text-[9px] select-none">✅</span> {item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -757,7 +799,7 @@ export default function App() {
               📚 Todas as Temporadas Disponíveis Hoje
             </h2>
             <p className="text-slate-400 text-xs sm:text-sm mt-2 max-w-xl mx-auto text-pretty" style={{ textWrap: "pretty" }}>
-              Mais de 5.200 episódios organizados cronologicamente e acessíveis imediatamente após a compra.
+              Talvez uma dessas temporadas tenha feito parte da sua adolescência. Cada uma dessas capas marcou uma fase diferente da vida de milhares de fãs.
             </p>
           </div>
 
@@ -1112,6 +1154,38 @@ export default function App() {
       </section>
 
 
+      {/* --- SEÇÃO DE GATILHO DE IDENTIFICAÇÃO --- */}
+      <section className="px-4 py-12 bg-slate-900 border-t border-slate-950 text-white text-center">
+        <div className="max-w-md mx-auto">
+          <span className="text-[10px] text-red-500 bg-red-500/10 font-mono font-black uppercase px-3 py-1 rounded-full border border-red-500/20 select-none">
+            📺 NOSTALGIA PURA
+          </span>
+          <h2 className="font-sans font-black text-lg sm:text-xl text-white mt-3 uppercase tracking-tight text-balance" style={{ textWrap: "balance" }}>
+            📺 Quantas Dessas Fases Você Lembra?
+          </h2>
+          <p className="text-slate-400 text-xs sm:text-sm mt-1.5 mb-6 text-pretty max-w-xs mx-auto leading-normal" style={{ textWrap: "pretty" }}>
+            Se alguma dessas capas trouxe boas lembranças, este acervo foi criado para você.
+          </p>
+          
+          <div className="grid grid-cols-3 gap-2.5 max-w-sm mx-auto">
+            {[
+              { year: "2001", src: "https://i.ibb.co/nssYmFZL/2001.jpg", desc: "Cabeção / Beto" },
+              { year: "2005", src: "https://i.ibb.co/TBJ3krY9/2005.jpg", desc: "Vagabanda / Bernardo" },
+              { year: "2008", src: "https://i.ibb.co/jPvGK4mf/2008.jpg", desc: "Débora / Yasmin" }
+            ].map((cover, idx) => (
+              <div key={idx} className="bg-slate-950/65 border border-slate-800 rounded-xl p-1.5 flex flex-col items-center shadow-md">
+                <div className="aspect-[2/3] w-full rounded-lg overflow-hidden border border-slate-800 bg-slate-900 mb-1.5">
+                  <img src={cover.src} alt={`Capa ${cover.year}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <span className="font-mono font-black text-[9px] text-red-500">{cover.year}</span>
+                <span className="text-[8px] text-slate-400 font-extrabold truncate w-full text-center mt-0.5">{cover.desc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* --- SEÇÃO 7 — PLANOS --- */}
       <section id="section-planos" className="px-4 py-20 bg-slate-50 scroll-mt-20">
         <div className="max-w-md mx-auto">
@@ -1134,7 +1208,7 @@ export default function App() {
               </h3>
             </div>
             <p className="text-slate-600 text-[11px] sm:text-[11.5px] leading-relaxed mb-3 text-pretty" style={{ textWrap: "pretty" }}>
-              Você não recebe apenas acesso ao acervo. Também entra para uma comunidade privada onde fãs compartilham lembranças, temporadas favoritas e recebem novidades em primeira mão.
+              Mais do que acesso às temporadas, você entra para uma comunidade onde fãs revivem juntos personagens, histórias e momentos que marcaram uma geração.
             </p>
             <div className="grid grid-cols-2 gap-2 text-[10px] sm:text-[11px] font-bold text-slate-700">
               <div className="flex items-center gap-1.5 bg-white px-2 py-1.5 rounded-xl border border-slate-100 shadow-3xs h-full min-h-[34px]">
@@ -1683,6 +1757,10 @@ export default function App() {
               </div>
             </div>
           </div>
+
+          <p className="text-slate-600 text-xs sm:text-sm italic font-medium mb-4 max-w-sm mx-auto text-center leading-normal">
+            "Algumas histórias marcaram uma época. Agora você pode revivê-las quando quiser."
+          </p>
 
           <div onClick={() => smoothScrollTo("section-planos")} className="block transform transition hover:scale-[1.01] active:scale-95 duration-100 cursor-pointer">
             <button className="w-full bg-red-650 bg-red-600 hover:bg-red-700 text-white font-sans font-black py-4 px-6 rounded-2xl shadow-xl shadow-red-600/15 flex flex-col items-center justify-center gap-0.5 uppercase tracking-tight text-center">
