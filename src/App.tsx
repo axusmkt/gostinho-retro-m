@@ -387,14 +387,14 @@ export default function App() {
           <div className="flex gap-4 justify-center whitespace-nowrap -translate-x-8">
             {COVERS.map((src, i) => (
               <div key={`c1-${i}`} className="w-16 h-24 rounded-lg overflow-hidden border border-slate-300 shadow-sm bg-slate-100 shrink-0">
-                <img src={src} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src={src} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
               </div>
             ))}
           </div>
           <div className="flex gap-4 justify-center whitespace-nowrap translate-x-12">
             {COVERS.slice().reverse().map((src, i) => (
               <div key={`c2-${i}`} className="w-16 h-24 rounded-lg overflow-hidden border border-slate-300 shadow-sm bg-slate-100 shrink-0">
-                <img src={src} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src={src} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
               </div>
             ))}
           </div>
@@ -414,10 +414,13 @@ export default function App() {
           {/* Imagem Hero */}
           <div className="w-[90%] sm:w-[95%] mx-auto mb-6">
             <img 
-              src="https://i.ibb.co/5xBW2LSz/Img-Section-Hero-Malhacao.png" 
+              src="https://i.ibb.co/yTphLkJ/Gemini-Generated-Image-nll2ofnll2ofnll2-removebg-preview.png" 
               alt="Acervo Completo de Malhação" 
               referrerPolicy="no-referrer"
               className="w-full h-auto object-contain mx-auto"
+              loading="eager"
+              decoding="sync"
+              fetchPriority="high"
             />
           </div>
 
@@ -836,6 +839,8 @@ export default function App() {
                         alt={`Malhação ${item.year}`} 
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover" 
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute top-1.5 right-1.5 bg-emerald-600/95 text-white text-[7px] font-black uppercase px-1.5 py-0.5 rounded-md flex items-center gap-0.5 shadow-sm border border-emerald-500/20 z-10">
                         <span>✓ Disponível</span>
@@ -890,6 +895,8 @@ export default function App() {
                         alt={`Malhação ${item.year}`} 
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover" 
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute top-1.5 right-1.5 bg-emerald-600/95 text-white text-[7px] font-black uppercase px-1.5 py-0.5 rounded-md flex items-center gap-0.5 shadow-sm border border-emerald-500/20 z-10">
                         <span>✓ Disponível</span>
@@ -941,6 +948,8 @@ export default function App() {
                         alt={`Malhação ${item.year}`} 
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover" 
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute top-1.5 right-1.5 bg-emerald-600/95 text-white text-[7px] font-black uppercase px-1.5 py-0.5 rounded-md flex items-center gap-0.5 shadow-sm border border-emerald-500/20 z-10">
                         <span>✓ Disponível</span>
@@ -1175,7 +1184,7 @@ export default function App() {
             ].map((cover, idx) => (
               <div key={idx} className="bg-slate-950/65 border border-slate-800 rounded-xl p-1.5 flex flex-col items-center shadow-md">
                 <div className="aspect-[2/3] w-full rounded-lg overflow-hidden border border-slate-800 bg-slate-900 mb-1.5">
-                  <img src={cover.src} alt={`Capa ${cover.year}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src={cover.src} alt={`Capa ${cover.year}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                 </div>
                 <span className="font-mono font-black text-[9px] text-red-500">{cover.year}</span>
                 <span className="text-[8px] text-slate-400 font-extrabold truncate w-full text-center mt-0.5">{cover.desc}</span>
@@ -1847,6 +1856,7 @@ export default function App() {
                 alt={selectedCover.title} 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover" 
+                decoding="async"
               />
               <div className="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md flex items-center gap-1 shadow border border-emerald-500/20">
                 <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping" />
