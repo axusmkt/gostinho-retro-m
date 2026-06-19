@@ -192,31 +192,37 @@ const CAROUSEL_SLIDES = [
   }
 ];
 
-const SEASONS_LIST = [
-  { year: "1995", episodes: "180 eps", label: "Estreia (Fase Academia)" },
-  { year: "1996", episodes: "195 eps", label: "Fase Academia (Dado e Luiza)" },
-  { year: "1997", episodes: "250 eps", label: "Fase Academia (Héricles/Paty)" },
-  { year: "1998", episodes: "110 eps", label: "Último ano na Academia" },
-  { year: "1999", episodes: "125 eps", label: "Transição Múltipla Escolha" },
-  { year: "2000", episodes: "250 eps", label: "Par perfeito (Joana e Marcelo)" },
-  { year: "2002", episodes: "250 eps", label: "Pedro e Julia (Fase Clássica)" },
-  { year: "2003", episodes: "185 eps", label: "Victor e Luísa / Cabeção" },
-  { year: "2004", episodes: "250 eps", label: "Vagabanda (Gustavo e Letícia)" },
-  { year: "2005", episodes: "258 eps", label: "Bernardo e Jaque / Urubu" },
-  { year: "2006", episodes: "262 eps", label: "Cauã e Manuela / Skate" },
-  { year: "2007", episodes: "230 eps", label: "Marcela e André / Bodão" },
-  { year: "2008", episodes: "244 eps", label: "Débora, Yasmin e Peralta" },
-  { year: "2009", episodes: "215 eps", label: "Marina, Caio e Paloma" },
-  { year: "Identidade", episodes: "129 eps", label: "Fase Identidade (2009/2010)" },
-  { year: "2010", episodes: "125 eps", label: "Catarina e Pedro (DJ)" },
-  { year: "2011", episodes: "249 eps", label: "Fase Conectados / Mistério" },
-  { year: "2012", episodes: "228 eps", label: "Fase Ju e Dinho / Lia" },
-  { year: "2014", episodes: "245 eps", label: "Fase Sonhos (Ducca e Karina)" },
-  { year: "2015", episodes: "145 eps", label: "Fase Seu Lugar no Mundo" },
-  { year: "2016", episodes: "250 eps", label: "Fase Pro Dia Nascer Feliz" },
-  { year: "2017", episodes: "213 eps", label: "Viva a Diferença (As Five)" },
-  { year: "2018", episodes: "282 eps", label: "Fase Vidas Brasileiras" },
-  { year: "2019", episodes: "252 eps", label: "Toda Forma de Amar" }
+const BLOCO_90 = [
+  { year: "1995", image: "https://i.ibb.co/27GcKy5G/1995.jpg", label: "Malhação 1995" },
+  { year: "1996", image: "https://i.ibb.co/qSXHG3T/1996.jpg", label: "Malhação 1996" },
+  { year: "1997", image: "https://i.ibb.co/nMs1tZpd/1997.jpg", label: "Malhação 1997" },
+  { year: "1998", image: "https://i.ibb.co/bR3MKtnp/1998.jpg", label: "Malhação 1998" },
+  { year: "1999", image: "https://i.ibb.co/XfvK4dNX/1999-IDENTIDADE.jpg", label: "Malhação 1999" }
+];
+
+const BLOCO_GOLD = [
+  { year: "2000", image: "https://i.ibb.co/SXCHNjr5/1999.jpg", label: "Malhação 2000" },
+  { year: "2002", image: "https://i.ibb.co/KckJ0sn6/2001.jpg", label: "Malhação 2002" },
+  { year: "2003", image: "https://i.ibb.co/KckJ0sn6/2001.jpg", label: "Malhação 2003" },
+  { year: "2004", image: "https://i.ibb.co/8gx6cdNv/2005.jpg", label: "Malhação 2004" },
+  { year: "2005", image: "https://i.ibb.co/8gx6cdNv/2005.jpg", label: "Malhação 2005" },
+  { year: "2006", image: "https://i.ibb.co/G4N70vFm/2006.jpg", label: "Malhação 2006" },
+  { year: "2007", image: "https://i.ibb.co/G4N70vFm/2006.jpg", label: "Malhação 2007" },
+  { year: "2008", image: "https://i.ibb.co/GfhStqTw/2008.jpg", label: "Malhação 2008" },
+  { year: "2009", image: "https://i.ibb.co/8D4GN8V3/2009.jpg", label: "Malhação 2009" },
+  { year: "Identidade", image: "https://i.ibb.co/nqnJb5Vj/2009-ID.jpg", label: "Malhação Identidade" }
+];
+
+const BLOCO_NEW = [
+  { year: "2010", image: "https://i.ibb.co/5XfwQLBV/2010.jpg", label: "Malhação 2010" },
+  { year: "2011", image: "https://i.ibb.co/2Y0vCv8m/2011.jpg", label: "Malhação 2011" },
+  { year: "2012", image: "https://i.ibb.co/bgtzmsrj/2012.jpg", label: "Malhação 2012" },
+  { year: "2014", image: "https://i.ibb.co/WvwTffyF/2014.jpg", label: "Malhação 2014" },
+  { year: "2015", image: "https://i.ibb.co/VcV9B25t/2015.jpg", label: "Malhação 2015" },
+  { year: "2016", image: "https://i.ibb.co/1fJcfqQ0/2013.jpg", label: "Malhação 2016" }, // 1fJcfqQ0 is indeed 2016 grunge graphic!
+  { year: "2017", image: "https://i.ibb.co/vxJM77kY/2017.jpg", label: "Malhação 2017" },
+  { year: "2018", image: "https://i.ibb.co/cSBvGX1G/20172018.jpg", label: "Malhação 2018" },
+  { year: "2019", image: "https://i.ibb.co/KxTK5Q8M/20172019.jpg", label: "Malhação 2019" }
 ];
 
 export default function App() {
@@ -234,6 +240,9 @@ export default function App() {
   const [faqOpen, setFaqOpen] = useState<Record<number, boolean>>({
     0: true, // first question starts open for higher engagement
   });
+
+  // State for opening cover image zoom modal
+  const [selectedCover, setSelectedCover] = useState<{ year: string; title: string; image: string } | null>(null);
 
   // Cycle social proof toast notifications in bottom corner
   useEffect(() => {
@@ -375,63 +384,78 @@ export default function App() {
 
         <div className="relative max-w-md mx-auto text-center z-10">
           
-          {/* Tag de posicionamento inovador */}
-          <div className="inline-flex items-center gap-1.5 bg-red-50 text-red-650 text-[10px] sm:text-[10.5px] font-extrabold px-3.5 py-1.5 rounded-full border border-red-150 border-red-200/50 uppercase tracking-wide mb-5">
-            <Award className="w-3.5 h-3.5 text-red-600 shrink-0" />
-            O Acervo Definitivo para Fãs de Malhação
+          {/* Selo Superior */}
+          <div className="inline-flex items-center justify-center bg-red-50 text-red-600 text-[10px] sm:text-[11px] font-black px-4 py-1.5 rounded-full border border-red-200/50 uppercase tracking-wider mb-5 select-none">
+            O ACERVO DEFINITIVO PARA FÃS DE MALHAÇÃO
           </div>
 
-          <h1 className="font-sans font-black text-2.5xl sm:text-3xl text-slate-950 tracking-tight leading-none mb-4 uppercase">
-            📺 MAIS DE 20 ANOS DE MALHAÇÃO ORGANIZADOS EM UM SÓ LUGAR
+          <h1 className="font-sans font-black text-3xl sm:text-4xl text-slate-950 tracking-tight leading-[1.05] mb-5 uppercase max-w-sm mx-auto text-balance" style={{ textWrap: "balance" }}>
+            Reviva mais de 20 anos de Malhação quando quiser
           </h1>
 
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 px-1">
-            Reviva suas fases favoritas da novela através de um acervo organizado com temporadas clássicas dos anos 90, 2000 e 2010. O maior acervo organizado de Malhação disponível atualmente.
+          {/* Imagem Hero */}
+          <div className="w-[90%] sm:w-[95%] mx-auto mb-6">
+            <img 
+              src="https://i.ibb.co/5xBW2LSz/Img-Section-Hero-Malhacao.png" 
+              alt="Acervo Completo de Malhação" 
+              referrerPolicy="no-referrer"
+              className="w-full h-auto object-contain mx-auto"
+            />
+          </div>
+
+          {/* Subheadline (Curta e Direta) */}
+          <p className="text-slate-600 text-[12.5px] sm:text-[13.5px] leading-snug mb-6 px-1 text-pretty max-w-sm mx-auto" style={{ textWrap: "pretty" }}>
+            Receba acesso imediato às 24 temporadas disponíveis hoje com entrega automática por e-mail e WhatsApp.
           </p>
 
-          {/* Bullet points de conversão rápida */}
-          <div className="grid grid-cols-1 gap-2.5 text-left mb-6 bg-slate-50 border border-slate-200/50 p-4 rounded-2xl shadow-inner">
-            <div className="flex items-center gap-2.5 font-bold text-xs sm:text-[13px] text-slate-800">
-              <span className="text-emerald-550 font-bold text-base shrink-0">✅</span>
-              <span>24 temporadas disponíveis hoje</span>
+          {/* Benefícios Compactos (Grid 2x2) */}
+          <div className="grid grid-cols-2 gap-2 text-left mb-6 max-w-sm mx-auto font-black text-[10px] sm:text-[11px] text-slate-800 uppercase tracking-tight">
+            <div className="flex items-center gap-2 bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl shadow-sm">
+              <span className="text-emerald-600 shrink-0 select-none">✅</span>
+              <span>24 Temporadas Disponíveis</span>
             </div>
-            <div className="flex items-center gap-2.5 font-bold text-xs sm:text-[13px] text-slate-800">
-              <span className="text-emerald-550 font-bold text-base shrink-0">✅</span>
-              <span>Organização cronológica impecável</span>
+            <div className="flex items-center gap-2 bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl shadow-sm">
+              <span className="text-emerald-600 shrink-0 select-none">✅</span>
+              <span>Entrega Imediata</span>
             </div>
-            <div className="flex items-center gap-2.5 font-bold text-xs sm:text-[13px] text-slate-800">
-              <span className="text-emerald-550 font-bold text-base shrink-0">✅</span>
-              <span>Acesso imediato enviado por e-mail</span>
+            <div className="flex items-center gap-2 bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl shadow-sm">
+              <span className="text-emerald-600 shrink-0 select-none">✅</span>
+              <span>Comunidade Exclusiva</span>
             </div>
-            <div className="flex items-center gap-2.5 font-bold text-xs sm:text-[13px] text-slate-800">
-              <span className="text-emerald-550 font-bold text-base shrink-0">✅</span>
-              <span>Telegram estruturado (direto no seu celular ou PC)</span>
-            </div>
-            <div className="flex items-center gap-2.5 font-bold text-xs sm:text-[13px] text-slate-800">
-              <span className="text-emerald-550 font-bold text-base shrink-0">✅</span>
-              <span>Novas atualizações futuras incluídas gratuitamente</span>
-            </div>
-            <div className="flex items-center gap-2.5 font-bold text-xs sm:text-[13px] text-slate-800">
-              <span className="text-emerald-550 font-bold text-base shrink-0">✅</span>
-              <span>Pagamento único (sem taxas mensais ocultas)</span>
+            <div className="flex items-center gap-2 bg-slate-50 border border-slate-200/60 p-2.5 rounded-xl shadow-sm">
+              <span className="text-emerald-600 shrink-0 select-none">✅</span>
+              <span>Acesso Vitalício</span>
             </div>
           </div>
 
-          {/* CTA Principal de alto contraste */}
-          <div onClick={() => smoothScrollTo("section-planos")} className="block transform transition-transform hover:scale-[1.01] active:scale-95 duration-100 cursor-pointer">
-            <button className="w-full bg-red-600 hover:bg-red-700 text-white font-sans font-black py-4 px-6 rounded-2xl shadow-xl shadow-red-650/15 text-sm sm:text-base flex items-center justify-center gap-2.5 uppercase tracking-tight text-center">
-              🔥 LIBERAR ACERVO COMPLETO POR R$19,90
-              <ArrowRight className="w-4 h-4 ml-1 animate-pulse" />
+          {/* CTA Principal de alto impacto */}
+          <div onClick={() => smoothScrollTo("section-planos")} className="block transform transition-transform hover:scale-[1.01] active:scale-95 duration-100 cursor-pointer mb-5">
+            <button className="w-full bg-red-600 hover:bg-red-700 text-white font-sans font-black py-4 px-6 rounded-2xl shadow-xl shadow-red-600/20 flex flex-col items-center justify-center gap-1 uppercase tracking-tight text-center cursor-pointer">
+              <span className="text-[10px] sm:text-[11px] tracking-wider text-red-100 font-extrabold block">GARANTIR ACESSO COMPLETO</span>
+              <span className="text-base sm:text-lg font-black block">
+                POR APENAS R$19,90
+              </span>
             </button>
           </div>
 
-          <div className="mt-3 flex items-center justify-center gap-4 text-xs font-semibold text-slate-400">
-            <span className="flex items-center gap-1.5 justify-center">
-              <ShieldCheck className="w-4 h-4 text-slate-400 shrink-0" />
-              🛡️ Garantia de 7 dias
-            </span>
-            <span className="w-1.5 h-1.5 bg-slate-300 rounded-full" />
-            <span>⚡ Envio automático imediato</span>
+          {/* Badges de Confiança Compactos (Grid 2x2) */}
+          <div className="grid grid-cols-2 gap-2 text-[9.5px] sm:text-[10.5px] font-extrabold text-slate-500 text-center uppercase tracking-wide">
+            <div className="flex items-center justify-center gap-1.5 py-2 px-1.5 bg-slate-50/65 border border-slate-200/40 rounded-xl">
+              <span>📧</span>
+              <span>Entrega por E-mail</span>
+            </div>
+            <div className="flex items-center justify-center gap-1.5 py-2 px-1.5 bg-slate-50/65 border border-slate-200/40 rounded-xl">
+              <span>💬</span>
+              <span>Entrega por WhatsApp</span>
+            </div>
+            <div className="flex items-center justify-center gap-1.5 py-2 px-1.5 bg-slate-50/65 border border-slate-200/40 rounded-xl">
+              <span>🛡️</span>
+              <span>Garantia de 7 Dias</span>
+            </div>
+            <div className="flex items-center justify-center gap-1.5 py-2 px-1.5 bg-slate-50/65 border border-slate-200/40 rounded-xl">
+              <span>♾️</span>
+              <span>Acesso Vitalício</span>
+            </div>
           </div>
 
         </div>
@@ -446,11 +470,11 @@ export default function App() {
             <span className="text-[10px] text-red-400 bg-red-950/55 font-mono font-black uppercase px-3 py-1.5 rounded-md border border-red-900/30 select-none">
               📱 PROVA VISUAL PREMIUM
             </span>
-            <h2 className="font-sans font-black text-xl sm:text-2xl text-white mt-3 uppercase tracking-tight">
-              📲 Veja Como Funciona Por Dentro
+            <h2 className="font-sans font-black text-xl sm:text-2xl text-white mt-3 uppercase tracking-tight text-balance" style={{ textWrap: "balance" }}>
+              📲 Veja Exatamente o Que Você Recebe
             </h2>
-            <p className="text-slate-400 text-xs sm:text-sm mt-1 mb-8 max-w-sm mx-auto">
-              Capturas reais da estrutura extremamente organizada que você vai receber ao garantir seu acesso hoje.
+            <p className="text-slate-400 text-xs sm:text-sm mt-1 mb-8 max-w-sm mx-auto text-pretty" style={{ textWrap: "pretty" }}>
+              Capturas reais da área de membros, organização das temporadas e estrutura interna disponível após a compra.
             </p>
           </div>
 
@@ -597,11 +621,11 @@ export default function App() {
             <span className="text-[10px] text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded font-bold uppercase font-mono tracking-wider border border-emerald-100">
               CONTEÚDO COMPLETO
             </span>
-            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 mt-3 uppercase tracking-tight">
+            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 mt-3 uppercase tracking-tight text-balance" style={{ textWrap: "balance" }}>
               🎁 Tudo Que Está Incluído
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">
-              Benefícios e recursos exclusivos desenhados para que você tenha a melhor experiência assistindo:
+            <p className="text-slate-500 text-xs sm:text-sm mt-1 text-pretty" style={{ textWrap: "pretty" }}>
+              Benefícios e recursos exclusivos desenhados para que você tenha a melhor experiência {"assistindo:"}
             </p>
           </div>
 
@@ -685,6 +709,32 @@ export default function App() {
               </div>
             </div>
 
+            {/* Card 7 */}
+            <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-3.5 leading-tight hover:shadow-md transition">
+              <span className="text-2xl shrink-0 p-1.5 bg-red-50 rounded-xl">💬</span>
+              <div>
+                <h4 className="font-sans font-black text-xs sm:text-[13px] text-slate-900 uppercase">
+                  Entrega também pelo WhatsApp
+                </h4>
+                <p className="text-slate-500 text-[11.5px] mt-1 leading-normal">
+                  Além do e-mail, o acesso é enviado automaticamente para o WhatsApp cadastrado.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 8 */}
+            <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-3.5 leading-tight hover:shadow-md transition">
+              <span className="text-2xl shrink-0 p-1.5 bg-red-50 rounded-xl">👥</span>
+              <div>
+                <h4 className="font-sans font-black text-xs sm:text-[13px] text-slate-900 uppercase">
+                  Comunidade Exclusiva de Fãs
+                </h4>
+                <p className="text-slate-500 text-[11.5px] mt-1 leading-normal">
+                  Interaja com outros membros apaixonados por Malhação dentro da comunidade privada.
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -692,58 +742,219 @@ export default function App() {
 
 
       {/* --- SEÇÃO 4 — ACERVO COMPLETO --- */}
-      <section id="section-acervo-completo" className="px-4 py-20 bg-white border-y border-slate-100">
-        <div className="max-w-md mx-auto">
+      <section id="section-acervo-completo" className="py-20 bg-slate-950 text-white border-y border-slate-900 relative overflow-hidden">
+        {/* Ambient streaming glow effects */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-red-600/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-2/3 left-10 w-[300px] h-[300px] bg-purple-600/5 rounded-full blur-3xl pointer-events-none" />
+        
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
           
-          <div className="text-center mb-6">
-            <span className="text-[10px] text-red-600 bg-red-50 font-mono font-black uppercase px-2.5 py-1 rounded select-none border border-red-100">
-              📚 COLECIONISMO HISTÓRICO
+          <div className="text-center mb-16">
+            <span className="text-[10px] text-red-500 bg-red-500/10 font-mono font-black uppercase px-3 py-1 rounded-full select-none border border-red-500/20 tracking-wider">
+              🎬 PLATAFORMA STREAMING RETRÔ
             </span>
-            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 mt-3 uppercase tracking-tight">
-              📚 Temporadas Disponíveis Hoje
+            <h2 className="font-sans font-black text-2xl sm:text-3xl lg:text-4xl text-white mt-4 uppercase tracking-tight text-balance" style={{ textWrap: "balance" }}>
+              📚 Todas as Temporadas Disponíveis Hoje
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">
-              Todas as 24 temporadas clássicas organizadas e acessíveis imediatamente:
+            <p className="text-slate-400 text-xs sm:text-sm mt-2 max-w-xl mx-auto text-pretty" style={{ textWrap: "pretty" }}>
+              Mais de 5.200 episódios organizados cronologicamente e acessíveis imediatamente após a compra.
             </p>
           </div>
 
-          {/* Grid visual premium das temporadas */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 mb-6">
-            {SEASONS_LIST.map((season) => (
+          {/* --- BLOCO 1: ANOS 90 --- */}
+          <div className="mb-14">
+            {/* Decade Divider (Glowing Neon Shelf Header) */}
+            <div className="flex items-center justify-center gap-4 mb-8 select-none">
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-purple-500/30 to-purple-500/60" />
+              <h3 className="font-sans font-black text-xs sm:text-sm tracking-widest text-purple-400 uppercase text-center drop-shadow-[0_0_8px_rgba(217,70,239,0.4)] flex items-center gap-1.5 px-3">
+                <span>⭐</span> ANOS 90 <span className="text-[10px] text-purple-300 font-medium font-mono lowercase tracking-normal">(1995–1999)</span>
+              </h3>
+              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-purple-500/30 to-purple-500/60" />
+            </div>
+
+            {/* Shelf & Carousel Carousel wrapper */}
+            <div className="relative group">
+              {/* Left/Right fades representing streaming overflow */}
+              <div className="absolute top-0 bottom-0 left-0 w-8 bg-gradient-to-r from-slate-950 to-transparent pointer-events-none z-10 hidden md:block" />
+              <div className="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-l from-slate-950 to-transparent pointer-events-none z-10 hidden md:block" />
+              
               <div 
-                key={season.year} 
-                className="bg-gradient-to-tr from-slate-900 to-slate-950 text-white rounded-2xl p-3 border border-slate-800 shadow flex flex-col justify-between hover:border-red-500 transition-colors"
+                className="flex gap-3 sm:gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory scrollbar-hide cursor-grab active:cursor-grabbing justify-start sm:justify-center md:justify-start" 
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                <div>
-                  <div className="flex justify-between items-start">
-                    <span className="font-sans font-black text-xl text-slate-100 block bg-red-650/10 px-1 rounded">
-                      {season.year}
-                    </span>
-                    <span className="bg-red-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded uppercase font-mono tracking-wider">
-                      {season.episodes}
-                    </span>
+                {BLOCO_90.map((item) => (
+                  <div 
+                    key={item.year}
+                    onClick={() => setSelectedCover({ year: item.year, title: `Malhação ${item.year}`, image: item.image })}
+                    className="flex-none w-[110px] sm:w-[130px] md:w-[140px] snap-start bg-slate-900/90 rounded-2xl overflow-hidden border border-slate-800/80 hover:border-purple-500/80 transition-all duration-300 transform hover:scale-[1.05] hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-950/20 cursor-pointer relative group-card"
+                  >
+                    <div className="aspect-[3/4] relative overflow-hidden bg-slate-950">
+                      <img 
+                        src={item.image} 
+                        alt={`Malhação ${item.year}`} 
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover" 
+                      />
+                      <div className="absolute top-1.5 right-1.5 bg-emerald-600/95 text-white text-[7px] font-black uppercase px-1.5 py-0.5 rounded-md flex items-center gap-0.5 shadow-sm border border-emerald-500/20 z-10">
+                        <span>✓ Disponível</span>
+                      </div>
+                    </div>
+                    <div className="p-2 text-center bg-slate-950/95 border-t border-slate-900">
+                      <span className="font-sans font-black text-xs text-slate-300 block uppercase tracking-wider">
+                        {item.year}
+                      </span>
+                    </div>
                   </div>
-                  <h4 className="font-sans font-bold text-[10.5px] text-slate-350 text-slate-300 mt-2 leading-tight uppercase">
-                    {season.label}
-                  </h4>
-                </div>
-                <div className="mt-3 flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                  <span className="text-[8px] font-mono uppercase text-slate-400 font-bold">100% Organizado</span>
-                </div>
+                ))}
               </div>
-            ))}
+              
+              {/* Graphical shelf base plate underneath */}
+              <div className="h-1.5 bg-gradient-to-b from-purple-950/20 to-transparent border-t border-purple-500/10 rounded-b shadow-[0_4px_10px_rgba(0,0,0,0.6)] mt-2 hidden md:block" />
+            </div>
           </div>
 
-          {/* Bloco destaque */}
-          <div className="bg-slate-900 text-white rounded-2xl p-4 text-center border border-slate-800 shadow-md">
-            <span className="text-red-500 text-xl font-bold block mb-1">🔥</span>
-            <p className="font-sans font-black text-sm text-slate-100 uppercase tracking-tight">
-              Mais de duas décadas de conteúdo organizadas em um único acervo.
-            </p>
-            <p className="text-[11px] text-slate-400 mt-1 leading-snug">
-              Esqueça de links espalhados ou de pagar canais caríssimos. Tudo o que você ama da novela das quatro está guardado no Múltipla Escolha Retrô.
-            </p>
+          {/* --- BLOCO 2: ANOS 2000 (HIGHLIGHTED SHADOWED GLASS) --- */}
+          <div className="mb-14 p-4 md:p-6 bg-gradient-to-br from-amber-500/5 via-amber-600/2 to-slate-950/10 rounded-3xl border border-amber-500/10 relative overflow-hidden shadow-2xl">
+            <div className="absolute top-[-50px] right-[-55px] w-48 h-48 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+            
+            {/* Decade Divider (Glowing Neon Shelf Header) */}
+            <div className="flex items-center justify-center gap-4 mb-8 select-none">
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-amber-500/30 to-amber-500/60" />
+              <h3 className="font-sans font-black text-xs sm:text-sm tracking-widest text-amber-500 uppercase text-center drop-shadow-[0_0_8px_rgba(245,158,11,0.4)] flex items-center gap-2 px-3">
+                <span>🔥</span> ANOS 2000 <span className="text-[10px] text-amber-300/80 font-medium font-mono lowercase tracking-normal">(2000–2009)</span>
+                <span className="bg-amber-500/10 text-amber-400 text-[8px] font-black px-1.5 py-0.5 rounded border border-amber-500/20 tracking-widest leading-none ml-1.5 hidden sm:inline-block">ERA DE OURO</span>
+              </h3>
+              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-amber-500/30 to-amber-500/60" />
+            </div>
+
+            {/* Shelf & Carousel */}
+            <div className="relative group">
+              <div className="absolute top-0 bottom-0 left-0 w-8 bg-gradient-to-r from-slate-950 to-transparent pointer-events-none z-10 hidden md:block" />
+              <div className="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-l from-slate-950 to-transparent pointer-events-none z-10 hidden md:block" />
+              
+              <div 
+                className="flex gap-3 sm:gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory scrollbar-hide cursor-grab active:cursor-grabbing justify-start" 
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {BLOCO_GOLD.map((item) => (
+                  <div 
+                    key={item.year}
+                    onClick={() => setSelectedCover({ year: item.year, title: `Malhação ${item.year === 'Identidade' ? 'Identidade' : item.year}`, image: item.image })}
+                    className="flex-none w-[110px] sm:w-[130px] md:w-[140px] snap-start bg-slate-900/90 rounded-2xl overflow-hidden border border-amber-500/15 hover:border-amber-400 transition-all duration-300 transform hover:scale-[1.05] hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-950/20 cursor-pointer relative"
+                  >
+                    <div className="aspect-[3/4] relative overflow-hidden bg-slate-950">
+                      <img 
+                        src={item.image} 
+                        alt={`Malhação ${item.year}`} 
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover" 
+                      />
+                      <div className="absolute top-1.5 right-1.5 bg-emerald-600/95 text-white text-[7px] font-black uppercase px-1.5 py-0.5 rounded-md flex items-center gap-0.5 shadow-sm border border-emerald-500/20 z-10">
+                        <span>✓ Disponível</span>
+                      </div>
+                    </div>
+                    <div className="p-2 text-center bg-slate-950/95 border-t border-slate-900">
+                      <span className="font-sans font-black text-xs text-amber-200 block uppercase tracking-wider">
+                        {item.year === 'Identidade' ? 'Identidade' : item.year}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Graphical shelf base plate underneath */}
+              <div className="h-1.5 bg-gradient-to-b from-amber-950/20 to-transparent border-t border-amber-500/15 rounded-b shadow-[0_4px_10px_rgba(0,0,0,0.6)] mt-2 hidden md:block" />
+            </div>
+          </div>
+
+          {/* --- BLOCO 3: ANOS 2010 --- */}
+          <div className="mb-16">
+            {/* Decade Divider (Glowing Neon Shelf Header) */}
+            <div className="flex items-center justify-center gap-4 mb-8 select-none">
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-sky-500/30 to-sky-500/60" />
+              <h3 className="font-sans font-black text-xs sm:text-sm tracking-widest text-sky-400 uppercase text-center drop-shadow-[0_0_8px_rgba(14,165,233,0.4)] flex items-center gap-1.5 px-3">
+                <span>🚀</span> ANOS 2010 <span className="text-[10px] text-sky-300 font-medium font-mono lowercase tracking-normal">(2010–2019)</span>
+              </h3>
+              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-sky-500/30 to-sky-500/60" />
+            </div>
+
+            {/* Shelf & Carousel */}
+            <div className="relative group">
+              <div className="absolute top-0 bottom-0 left-0 w-8 bg-gradient-to-r from-slate-950 to-transparent pointer-events-none z-10 hidden md:block" />
+              <div className="absolute top-0 bottom-0 right-0 w-8 bg-gradient-to-l from-slate-950 to-transparent pointer-events-none z-10 hidden md:block" />
+              
+              <div 
+                className="flex gap-3 sm:gap-4 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory scrollbar-hide cursor-grab active:cursor-grabbing justify-start" 
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {BLOCO_NEW.map((item) => (
+                  <div 
+                    key={item.year}
+                    onClick={() => setSelectedCover({ year: item.year, title: `Malhação ${item.year}`, image: item.image })}
+                    className="flex-none w-[110px] sm:w-[130px] md:w-[140px] snap-start bg-slate-900/90 rounded-2xl overflow-hidden border border-slate-800/80 hover:border-sky-500/80 transition-all duration-300 transform hover:scale-[1.05] hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-950/20 cursor-pointer relative"
+                  >
+                    <div className="aspect-[3/4] relative overflow-hidden bg-slate-950">
+                      <img 
+                        src={item.image} 
+                        alt={`Malhação ${item.year}`} 
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover" 
+                      />
+                      <div className="absolute top-1.5 right-1.5 bg-emerald-600/95 text-white text-[7px] font-black uppercase px-1.5 py-0.5 rounded-md flex items-center gap-0.5 shadow-sm border border-emerald-500/20 z-10">
+                        <span>✓ Disponível</span>
+                      </div>
+                    </div>
+                    <div className="p-2 text-center bg-gradient-to-t from-slate-950 to-slate-900 border-t border-slate-800/80">
+                      <span className="font-sans font-black text-xs text-slate-300 block uppercase tracking-wider">
+                        {item.year}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Graphical shelf base plate underneath */}
+              <div className="h-1.5 bg-gradient-to-b from-sky-950/20 to-transparent border-t border-sky-500/10 rounded-b shadow-[0_4px_10px_rgba(0,0,0,0.6)] mt-2 hidden md:block" />
+            </div>
+          </div>
+
+          {/* --- BLOCO DE PROVA APÓS CARROSSEIS (High-Impact summary block requested) --- */}
+          <div className="max-w-md mx-auto bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950 border border-slate-800 rounded-3xl p-6 md:p-8 text-left shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-red-600/5 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute top-2 right-4 text-3xl text-red-500 opacity-20 select-none">🔥</div>
+            
+            <h4 className="font-sans font-black text-sm sm:text-base text-slate-100 uppercase tracking-tight mb-5 flex items-center gap-1.5">
+              <span>🔥 Tudo isso já está disponível hoje no acervo:</span>
+            </h4>
+            
+            <ul className="space-y-3 mb-8 font-extrabold text-xs sm:text-[13px] text-slate-200">
+              <li className="flex items-center gap-2.5">
+                <span className="text-emerald-500 text-sm shrink-0">✅</span>
+                <span>24 temporadas disponíveis</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="text-emerald-500 text-sm shrink-0">✅</span>
+                <span>Mais de 5.200 episódios organizados</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="text-emerald-500 text-sm shrink-0">✅</span>
+                <span>Anos 90, 2000 e 2010</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="text-emerald-500 text-sm shrink-0">✅</span>
+                <span>Acesso imediato após a compra</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="text-emerald-500 text-sm shrink-0">✅</span>
+                <span>Atualizações futuras incluídas</span>
+              </li>
+            </ul>
+
+            <div onClick={() => smoothScrollTo("section-planos")} className="block transform transition hover:scale-[1.01] active:scale-95 duration-100 cursor-pointer">
+              <button className="w-full bg-red-600 hover:bg-red-700 text-white font-sans font-black py-4 px-4 rounded-2xl text-center uppercase tracking-tight text-xs sm:text-sm shadow-xl shadow-red-600/20 transition-all flex items-center justify-center gap-1.5">
+                🔥 GARANTIR ACESSO COMPLETO POR R$19,90
+              </button>
+            </div>
           </div>
 
         </div>
@@ -755,11 +966,11 @@ export default function App() {
         <div className="max-w-md mx-auto">
           
           <div className="text-center mb-6">
-            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 uppercase tracking-tight">
+            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 uppercase tracking-tight text-balance" style={{ textWrap: "balance" }}>
               ⚡ Receba Seu Acesso em Menos de 1 Minuto
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">
-              O processo é simples, prático e 100% seguro. Siga as etapas abaixo:
+            <p className="text-slate-500 text-xs sm:text-sm mt-1 text-pretty" style={{ textWrap: "pretty" }}>
+              O processo é simples, prático e 100% seguro. Siga as etapas {"abaixo:"}
             </p>
           </div>
 
@@ -906,12 +1117,43 @@ export default function App() {
         <div className="max-w-md mx-auto">
           
           <div className="text-center mb-6">
-            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 uppercase tracking-tight">
+            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 uppercase tracking-tight text-balance" style={{ textWrap: "balance" }}>
               Escolha Seu Plano de Acesso
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">
-              Escolha com segurança. Risco zero e acesso vitalício garantido.
+            <p className="text-slate-500 text-xs sm:text-sm mt-1 text-pretty" style={{ textWrap: "pretty" }}>
+              Escolha com segurança. Risco zero e acesso vitalício {"garantido."}
             </p>
+          </div>
+
+          {/* MICRO-BLOCO DE VALOR: MUITO MAIS QUE UM ACERVO */}
+          <div className="mb-6 bg-gradient-to-br from-red-500/5 to-red-600/5 border border-red-500/20 p-4 rounded-2xl shadow-sm text-left">
+            <div className="flex items-center gap-2 mb-1.5">
+              <span className="text-red-600 text-base leading-none">❤️</span>
+              <h3 className="font-sans font-black text-xs sm:text-sm text-slate-900 uppercase tracking-tight text-balance" style={{ textWrap: "balance" }}>
+                Muito Mais Que Um Acervo
+              </h3>
+            </div>
+            <p className="text-slate-600 text-[11px] sm:text-[11.5px] leading-relaxed mb-3 text-pretty" style={{ textWrap: "pretty" }}>
+              Você não recebe apenas acesso ao acervo. Também entra para uma comunidade privada onde fãs compartilham lembranças, temporadas favoritas e recebem novidades em primeira mão.
+            </p>
+            <div className="grid grid-cols-2 gap-2 text-[10px] sm:text-[11px] font-bold text-slate-700">
+              <div className="flex items-center gap-1.5 bg-white px-2 py-1.5 rounded-xl border border-slate-100 shadow-3xs h-full min-h-[34px]">
+                <span>📺</span>
+                <span>Acervo Organizado</span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-2 py-1.5 rounded-xl border border-slate-100 shadow-3xs h-full min-h-[34px]">
+                <span>💬</span>
+                <span>Suporte WhatsApp</span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-2 py-1.5 rounded-xl border border-slate-100 shadow-3xs h-full min-h-[34px]">
+                <span>👥</span>
+                <span>Comunidade Exclusiva</span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-2 py-1.5 rounded-xl border border-slate-100 shadow-3xs h-full min-h-[34px]">
+                <span>♾️</span>
+                <span>Acesso Vitalício</span>
+              </div>
+            </div>
           </div>
 
           {/* TABELA COMPARATIVA DE ALTÍSSIMA CLAREZA */}
@@ -964,6 +1206,21 @@ export default function App() {
                     <td className="py-2 px-2 text-center text-red-500 font-bold">❌</td>
                     <td className="py-2 px-2 text-center text-emerald-555 text-emerald-600 font-bold bg-red-50/30">✅</td>
                   </tr>
+                  <tr>
+                    <td className="py-2 px-2 font-semibold text-slate-600">Suporte WhatsApp</td>
+                    <td className="py-2 px-2 text-center text-red-500 font-bold">❌</td>
+                    <td className="py-2 px-2 text-center text-emerald-555 text-emerald-600 font-bold bg-red-50/30">✅</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 px-2 font-semibold text-slate-600">Comunidade Exclusiva</td>
+                    <td className="py-2 px-2 text-center text-red-500 font-bold">❌</td>
+                    <td className="py-2 px-2 text-center text-emerald-555 text-emerald-600 font-bold bg-red-50/30">✅</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 px-2 font-semibold text-slate-600">Entrega WhatsApp</td>
+                    <td className="py-2 px-2 text-center text-red-500 font-bold">❌</td>
+                    <td className="py-2 px-2 text-center text-emerald-555 text-emerald-600 font-bold bg-red-50/30">✅</td>
+                  </tr>
                   <tr className="bg-emerald-50/20">
                     <td className="py-2 px-2 font-bold text-slate-800">Vitalício</td>
                     <td className="py-2 px-2 text-center text-emerald-555 text-emerald-600 font-bold">✅</td>
@@ -987,10 +1244,10 @@ export default function App() {
                 </div>
                 
                 <h3 className="font-sans font-black text-base text-slate-950 uppercase leading-tight">
-                  Coleção Anos 2000
+                  Coleção Clássica Anos 2000
                 </h3>
-                <p className="text-slate-500 text-[11px] leading-snug mt-1">
-                  Ideal para quem quer revisitar as fases mais populares da década de 2000.
+                <p className="text-slate-500 text-[11px] leading-snug mt-1.5 font-bold text-pretty" style={{ textWrap: "pretty" }}>
+                  Perfeito para quem deseja começar pelas temporadas mais populares da década de 2000.
                 </p>
 
                 {/* Checklist Básico */}
@@ -1015,25 +1272,9 @@ export default function App() {
                     <span className="text-emerald-500 text-xs font-bold">✅</span>
                     <span>Malhação 2008</span>
                   </li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2 pt-2 border-t border-slate-100/50 text-slate-800">
                     <span className="text-emerald-500 text-xs font-bold">✅</span>
-                    <span>Acesso vitalício</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-slate-400">
-                    <span className="text-red-500 text-xs font-bold">❌</span>
-                    <span className="line-through">Temporadas dos anos 90</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-slate-400">
-                    <span className="text-red-500 text-xs font-bold">❌</span>
-                    <span className="line-through">Temporadas de 2010 em diante</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-slate-400">
-                    <span className="text-red-500 text-xs font-bold">❌</span>
-                    <span className="line-through">Atualizações futuras</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-slate-400">
-                    <span className="text-red-500 text-xs font-bold">❌</span>
-                    <span className="line-through">Grupo VIP</span>
+                    <span>📺 Mais de 1.200 episódios organizados</span>
                   </li>
                 </ul>
               </div>
@@ -1044,9 +1285,10 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="select-basico-btn"
-                className="w-full bg-transparent hover:bg-slate-50 text-slate-700 hover:text-slate-950 border-2 border-slate-350 font-sans font-black py-3.5 px-4 rounded-xl text-xs sm:text-sm transition duration-150 cursor-pointer text-center uppercase tracking-normal"
+                className="w-full block bg-transparent hover:bg-slate-50 text-slate-700 hover:text-slate-950 border-2 border-slate-350 font-sans font-black py-3 px-4 rounded-xl text-center uppercase tracking-normal transition duration-150 cursor-pointer flex flex-col items-center justify-center gap-0.5"
               >
-                🎬 COMEÇAR POR R$9,90
+                <span className="text-[9.5px] sm:text-[10px] tracking-wider text-slate-500 font-bold block">COMEÇAR ACESSO BÁSICO</span>
+                <span className="text-xs sm:text-sm font-black block">POR APENAS R$&nbsp;9,90</span>
               </a>
             </div>
 
@@ -1060,36 +1302,44 @@ export default function App() {
               </p>
               <ul className="space-y-1.5 mt-3 text-xs font-bold text-slate-800">
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 text-xs">✅</span>
-                  <span>Mais 19 temporadas</span>
+                  <span className="text-emerald-600 text-xs font-black">✅</span>
+                  <span>24 temporadas completas</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 text-xs">✅</span>
+                  <span className="text-emerald-600 text-xs font-black">✅</span>
                   <span>Mais de 5.200 episódios</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 text-xs">✅</span>
-                  <span>Fases dos anos 90</span>
+                  <span className="text-emerald-600 text-xs font-black">✅</span>
+                  <span>Anos 90 completos</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 text-xs">✅</span>
-                  <span>Fases dos anos 2010</span>
+                  <span className="text-emerald-600 text-xs font-black">✅</span>
+                  <span>Anos 2000 completos</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 text-xs">✅</span>
+                  <span className="text-emerald-600 text-xs font-black">✅</span>
+                  <span>Anos 2010 completos</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-emerald-600 text-xs font-black">✅</span>
+                  <span>Entrega por WhatsApp</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-emerald-600 text-xs font-black">✅</span>
+                  <span>Comunidade exclusiva de fãs</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-emerald-600 text-xs font-black">✅</span>
+                  <span>Suporte prioritário</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-emerald-600 text-xs font-black">✅</span>
                   <span>Atualizações futuras gratuitas</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 text-xs">✅</span>
-                  <span>Grupo VIP no Telegram</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-emerald-600 text-xs">✅</span>
-                  <span>Prioridade em novos conteúdos</span>
                 </li>
               </ul>
               <p className="text-[11px] font-extrabold text-slate-600 mt-4 italic border-t border-amber-200/60 pt-2.5">
-                A diferença é pequena. O conteúdo liberado é gigantesco.
+                Por menos de R$0,35 por temporada você libera o acervo completo.
               </p>
             </div>
 
@@ -1156,6 +1406,22 @@ export default function App() {
                     <span className="text-emerald-500 text-xs font-bold">✅</span>
                     <span>Acesso vitalício</span>
                   </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-emerald-500 text-xs font-bold">✅</span>
+                    <span>Entrega automática por e-mail</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-emerald-500 text-xs font-bold">✅</span>
+                    <span>Entrega automática por WhatsApp</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-emerald-500 text-xs font-bold">✅</span>
+                    <span>Comunidade exclusiva de fãs</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-emerald-500 text-xs font-bold">✅</span>
+                    <span>Suporte prioritário via WhatsApp</span>
+                  </li>
                   <li className="flex items-center gap-2 bg-emerald-50 p-2 rounded text-emerald-950 font-black block text-center text-[11px] uppercase tracking-tight mt-3">
                     🔥 Economia superior a 85% à vista!
                   </li>
@@ -1168,9 +1434,10 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="select-completo-btn"
-                className="w-full block bg-red-600 hover:bg-red-700 text-white font-sans font-black py-4 px-4 rounded-xl text-xs sm:text-sm transition duration-150 cursor-pointer text-center uppercase tracking-tight transform shadow-lg shadow-red-500/20 text-white hover:scale-[1.01] animate-pulse-btn"
+                className="w-full block bg-red-600 hover:bg-red-700 text-white font-sans font-black py-3.5 px-4 rounded-xl text-center uppercase tracking-tight transform shadow-lg shadow-red-500/20 hover:scale-[1.01] animate-pulse-btn flex flex-col items-center justify-center gap-0.5"
               >
-                🔥 LIBERAR ACERVO COMPLETO POR R$19,90
+                <span className="text-[10px] sm:text-[11px] tracking-wide text-slate-100/90 font-bold block">GARANTIR ACESSO COMPLETO</span>
+                <span className="text-sm sm:text-base font-black block">POR APENAS R$&nbsp;19,90</span>
               </a>
               <p className="text-center text-[9.5px] text-slate-400 mt-2 font-semibold">
                 🛡️ Transação segura e garantia incondicional de 7 dias incluída.
@@ -1191,11 +1458,11 @@ export default function App() {
             <span className="text-[10px] text-slate-500 bg-slate-100 px-2.5 py-1 rounded font-bold uppercase font-mono tracking-widest border border-slate-250">
               DEPOIMENTOS DOS MEMBROS
             </span>
-            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 mt-3 uppercase tracking-tight">
+            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 mt-3 uppercase tracking-tight text-balance" style={{ textWrap: "balance" }}>
               👤 O Que Estão Dizendo os Membros
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">
-              Descubra por que dezenas de fãs já estão recomendando nosso acervo:
+            <p className="text-slate-500 text-xs sm:text-sm mt-1 text-pretty" style={{ textWrap: "pretty" }}>
+              Descubra por que dezenas de fãs já estão recomendando {"nosso\u00A0acervo:"}
             </p>
           </div>
 
@@ -1234,6 +1501,59 @@ export default function App() {
       </section>
 
 
+      {/* MICRO-SEÇÃO APÓS DEPOIMENTOS: ACESSO EM MENOS DE 1 MINUTO */}
+      <section id="section-acesso-rapido" className="px-4 py-12 bg-slate-900 text-white text-center relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-110 opacity-[0.03] pointer-events-none text-red-500 font-sans font-black text-7xl select-none">
+          ⚡ 1 MINUTO
+        </div>
+        
+        <div className="max-w-md mx-auto relative z-10 text-left">
+          <div className="text-center mb-6">
+            <h2 className="font-sans font-black text-lg sm:text-xl uppercase tracking-tight text-white text-balance" style={{ textWrap: "balance" }}>
+              🚀 Liberação Automática em Menos de 1 Minuto
+            </h2>
+            <p className="text-slate-400 text-[11px] sm:text-xs mt-1 text-pretty" style={{ textWrap: "pretty" }}>
+              Após a aprovação do pagamento, nosso sistema envia automaticamente seu acesso por e-mail e WhatsApp.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="flex items-center gap-2 p-2.5 bg-slate-950/50 rounded-xl border border-white/5 h-full min-h-[52px]">
+              <span className="text-lg shrink-0">📧</span>
+              <span className="text-[11px] sm:text-xs text-slate-200 font-bold leading-tight">Receba o acesso no e-mail</span>
+            </div>
+            <div className="flex items-center gap-2 p-2.5 bg-slate-950/50 rounded-xl border border-white/5 h-full min-h-[52px]">
+              <span className="text-lg shrink-0">💬</span>
+              <span className="text-[11px] sm:text-xs text-slate-200 font-bold leading-tight">Receba o acesso no WhatsApp</span>
+            </div>
+            <div className="flex items-center gap-2 p-2.5 bg-slate-950/50 rounded-xl border border-white/5 h-full min-h-[52px]">
+              <span className="text-lg shrink-0">👥</span>
+              <span className="text-[11px] sm:text-xs text-slate-200 font-bold leading-tight">Entre na comunidade exclusiva</span>
+            </div>
+            <div className="flex items-center gap-2 p-2.5 bg-slate-950/50 rounded-xl border border-white/5 h-full min-h-[52px]">
+              <span className="text-lg shrink-0">🎬</span>
+              <span className="text-[11px] sm:text-xs text-slate-200 font-bold leading-tight">Comece a assistir imediatamente</span>
+            </div>
+          </div>
+
+          <a
+            href={CHECKOUT_COMPLETE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            id="acesso-rapido-completo-btn"
+            className="w-full block bg-red-600 hover:bg-red-700 text-white font-sans font-black py-3.5 px-4 rounded-xl text-center uppercase tracking-tight transform shadow-lg shadow-red-500/25 transition duration-150 cursor-pointer hover:scale-[1.01] animate-pulse-btn flex flex-col items-center justify-center gap-0.5"
+          >
+            <span className="text-[10px] sm:text-[11px] tracking-wide text-slate-100/90 font-bold block">GARANTIR ACESSO COMPLETO</span>
+            <span className="text-sm sm:text-base font-black block">POR APENAS R$&nbsp;19,90</span>
+          </a>
+          <p className="text-center text-[10px] text-slate-500 mt-2.5 font-bold uppercase tracking-wider">
+            ⚡ Transação Segura • Envio Imediato
+          </p>
+        </div>
+      </section>
+
+
       {/* --- SEÇÃO 9 — GARANTIA --- */}
       <section id="section-garantia" className="px-4 py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-md mx-auto text-center">
@@ -1243,12 +1563,12 @@ export default function App() {
               <ShieldCheck className="w-6 h-6 text-red-650 text-red-600" />
             </div>
 
-            <h3 className="font-sans font-black text-base text-slate-950 uppercase tracking-tight">
-              🛡️ Garantia Incondicional de 7 Dias
+            <h3 className="font-sans font-black text-base text-slate-950 uppercase tracking-tight text-balance" style={{ textWrap: "balance" }}>
+              🛡️ Teste Sem Risco Durante 7 Dias
             </h3>
 
-            <p className="text-slate-500 text-xs sm:text-sm leading-relaxed max-w-sm mx-auto mt-2.5 font-medium">
-              Se você não gostar da organização do acervo ou do produto recebido por qualquer motivo relevante, basta nos enviar um e-mail. Nós devolvemos 100% do seu valor pago de forma rápida, sem questionamentos. O seu risco é zero!
+            <p className="text-slate-500 text-xs sm:text-sm leading-relaxed max-w-sm mx-auto mt-2.5 font-medium text-pretty" style={{ textWrap: "pretty" }}>
+              Você pode explorar a estrutura, navegar pelas temporadas e avaliar o conteúdo. Se não ficar satisfeito, devolvemos 100% do valor dentro do prazo da garantia.
             </p>
           </div>
 
@@ -1261,40 +1581,36 @@ export default function App() {
         <div className="max-w-md mx-auto">
           
           <div className="text-center mb-6">
-            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 uppercase tracking-tight flex items-center justify-center gap-1.5">
+            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 uppercase tracking-tight flex items-center justify-center gap-1.5 text-balance" style={{ textWrap: "balance" }}>
               <HelpCircle className="w-5 h-5 text-red-600 shrink-0" />
               Perguntas Frequentes
             </h2>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">
-              Respondemos as principais dúvidas dos fãs antes da liberação:
+            <p className="text-slate-500 text-xs sm:text-sm mt-1 text-pretty" style={{ textWrap: "pretty" }}>
+              Respondemos as principais dúvidas dos fãs antes da {"liberação:"}
             </p>
           </div>
 
           <div className="space-y-2.5">
             {[
               {
-                q: "Como recebo acesso?",
-                a: "O envio do link de convite é realizado de maneira 100% imediata e automatizada para o e-mail cadastrado no momento do checkout. Compras via Pix ou Cartão são compensadas em segundos e liberadas!"
+                q: "Como recebo meu acesso?",
+                a: "Você recebe automaticamente por e-mail e WhatsApp após a aprovação do pagamento."
               },
               {
                 q: "Preciso pagar mensalidade?",
-                a: "De forma alguma! O valor cobrado é único. Uma vez adquirido o seu Plano Básico ou Completo, o seu período de acesso de uso é vitalício, livre de qualquer outra taxa futura."
+                a: "Não. O pagamento é único."
               },
               {
-                q: "Funciona no celular?",
-                a: "Sim! O acervo roda incrivelmente rápido em qualquer aparelho celular (iPhone ou Android) que possua o aplicativo do Telegram instalado. Os vídeos abrem diretamente no player integrado sem travar."
+                q: "Posso acessar pelo celular?",
+                a: "Sim. Funciona em celular, computador, tablet e Smart TV."
               },
               {
-                q: "Funciona no computador?",
-                a: "Sim! Você pode assistir tranquilamente em uma tela maior do computador utilizando as versões oficiais do Telegram Web ou Telegram Desktop."
-              },
-              {
-                q: "Quanto tempo demora para liberar?",
-                a: "Boletos bancários podem levar até 1 ou 2 dias úteis para compensarem, mas transações feitas por Pix ou Cartão de Crédito são aprovadas em tempo real e liberadas em menos de 1 minuto."
+                q: "O acesso expira?",
+                a: "Não. Seu acesso é vitalício."
               },
               {
                 q: "Receberei futuras atualizações?",
-                a: "Com toda certeza! Comprando o Plano Completo hoje você ganha inclusão para todas as novas atualizações de capítulos ou novos anos que trouxermos para o ecossistema gratuitamente."
+                a: "Sim. Compradores do Plano Completo recebem todas as futuras atualizações gratuitamente."
               }
             ].map((faq, fIdx) => {
               const isOpen = !!faqOpen[fIdx];
@@ -1340,24 +1656,45 @@ export default function App() {
 
         <div className="relative max-w-md mx-auto z-10">
           
-          <h2 className="font-sans font-black text-2xl sm:text-3xl text-slate-950 tracking-tight uppercase leading-tight">
-            📺 Reviva Mais de 20 Anos de História
-          </h2>
-
-          <p className="text-slate-600 text-sm mt-3 px-2 mb-6 leading-relaxed max-w-sm mx-auto">
-            Um único pagamento para acessar décadas de nostalgia organizadas e dezenas de memórias preciosas da sua juventude.
-          </p>
+          <div className="text-center mb-6">
+            <h2 className="font-sans font-black text-xl sm:text-2xl text-slate-950 uppercase tracking-tight text-balance mb-4" style={{ textWrap: "balance" }}>
+              Pronto Para Reviver a Nostalgia?
+            </h2>
+            <div className="grid grid-cols-1 gap-2 max-w-sm mx-auto text-left font-bold text-slate-800 text-xs sm:text-[13px] bg-white p-4 rounded-xl border border-slate-200/60 shadow-3xs">
+              <div className="flex items-center gap-2">
+                <span>📺</span>
+                <span>Mais de 5.200 Episódios Organizados</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span>📚</span>
+                <span>24 Temporadas Disponíveis</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span>💬</span>
+                <span>Entrega por WhatsApp</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span>👥</span>
+                <span>Comunidade Exclusiva</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span>♾️</span>
+                <span>Acesso Vitalício</span>
+              </div>
+            </div>
+          </div>
 
           <div onClick={() => smoothScrollTo("section-planos")} className="block transform transition hover:scale-[1.01] active:scale-95 duration-100 cursor-pointer">
-            <button className="w-full bg-red-600 hover:bg-red-700 text-white font-sans font-black py-4.5 px-6 rounded-2xl shadow-xl shadow-red-600/15 text-sm uppercase tracking-tight flex items-center justify-center gap-2.5">
-              🔥 LIBERAR ACERVO COMPLETO POR R$19,90
-              <ArrowRight className="w-4 h-4" />
+            <button className="w-full bg-red-650 bg-red-600 hover:bg-red-700 text-white font-sans font-black py-4 px-6 rounded-2xl shadow-xl shadow-red-600/15 flex flex-col items-center justify-center gap-0.5 uppercase tracking-tight text-center">
+              <span className="text-sm sm:text-base flex items-center justify-center gap-1 font-black block">
+                🔥 GARANTIR ACESSO COMPLETO POR R$19,90 <ArrowRight className="w-4 h-4 ml-0.5 animate-pulse inline-block" />
+              </span>
             </button>
           </div>
 
-          <span className="text-[9.5px] text-slate-400 block mt-4 font-bold uppercase tracking-widest leading-none select-none">
-            ⚡ CONFIRMAÇÃO DE COMPRA PROTEGIDA DE PONTA A PONTA
-          </span>
+          <p className="text-center text-[10px] sm:text-xs text-slate-500 mt-4 font-bold select-none uppercase tracking-wider">
+            Pagamento único • Liberação automática • Garantia de 7 dias
+          </p>
 
         </div>
       </section>
@@ -1400,10 +1737,72 @@ export default function App() {
             <button
               onClick={() => smoothScrollTo("section-planos")}
               id="sticky-footer-conversion-btn"
-              className="w-full bg-red-600 hover:bg-red-700 text-white font-sans font-black text-xs sm:text-sm uppercase py-2.5 px-4 rounded-xl tracking-wide transition duration-150 cursor-pointer shadow-lg shadow-red-600/20 text-center active:scale-95 flex items-center justify-center gap-2 animate-pulse-btn"
+              className="w-full bg-red-600 hover:bg-red-700 text-white font-sans font-black text-xs sm:text-sm uppercase py-2.5 px-4 rounded-xl tracking-wide transition duration-150 cursor-pointer shadow-lg shadow-red-600/20 text-center active:scale-95 flex items-center justify-center gap-1.5 animate-pulse-btn"
             >
-              🔥 LIBERAR ACERVO - R$ 19,90
+              🔥 LIBERAR ACERVO COMPLETO • R$&nbsp;19,90
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Zoom Modal for Series Covers */}
+      {selectedCover && (
+        <div 
+          className="fixed inset-0 bg-slate-950/90 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300"
+          onClick={() => setSelectedCover(null)}
+        >
+          <div 
+            className="bg-slate-900 border border-slate-800 rounded-3xl max-w-sm w-full overflow-hidden shadow-2xl relative animate-scale-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button 
+              onClick={() => setSelectedCover(null)}
+              className="absolute top-3 right-3 bg-slate-950/60 hover:bg-slate-950 text-white font-black rounded-full w-8 h-8 flex items-center justify-center border border-white/10 transition-colors cursor-pointer z-10"
+            >
+              ✕
+            </button>
+            
+            <div className="aspect-[3/4] bg-slate-950 relative">
+              <img 
+                src={selectedCover.image} 
+                alt={selectedCover.title} 
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover" 
+              />
+              <div className="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-md flex items-center gap-1 shadow border border-emerald-500/20">
+                <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping" />
+                <span>✓ Conteúdo Disponível</span>
+              </div>
+            </div>
+            
+            <div className="p-5 text-center">
+              <h3 className="font-sans font-black text-lg text-white uppercase tracking-tight">
+                {selectedCover.title}
+              </h3>
+              <p className="text-slate-400 text-xs mt-1.5 leading-relaxed">
+                Temporada 100% organizada com episódios completos, áudio original e imagem de alta qualidade digital.
+              </p>
+              
+              <div className="mt-4 grid grid-cols-2 gap-2 text-[10px] font-extrabold text-slate-300 uppercase tracking-wider mb-5">
+                <div className="bg-slate-950/50 p-2 rounded-xl border border-white/5">
+                  📺 Áudio Original
+                </div>
+                <div className="bg-slate-950/50 p-2 rounded-xl border border-white/5">
+                  ⚡ Envio Automático
+                </div>
+              </div>
+              
+              <button 
+                onClick={() => {
+                  setSelectedCover(null);
+                  smoothScrollTo("section-planos");
+                }}
+                className="w-full bg-red-650 bg-red-600 hover:bg-red-700 text-white font-sans font-black py-3 px-4 rounded-xl text-xs uppercase tracking-tight shadow-lg shadow-red-600/20 transition-all cursor-pointer"
+              >
+                🎥 LIBERAR AGORA NO COMPLETO
+              </button>
+            </div>
           </div>
         </div>
       )}
